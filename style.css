@@ -1,0 +1,189 @@
+
+:root{
+    --branco-principal: #ffffff;
+    --cinza-secundario: #c0c0c0;
+    --botao-azul: #167bf7;
+    --botao-azul-efeito: #3c92fa;
+    --cor-de-fundo: #00030c;
+    --fonte-principal: 'inter';
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: var(--cor-de-fundo);
+    color: var(--branco-principal) ;
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 400; /*Peso da fonte*/
+}
+
+.principal{ /*Abrange o H1 e o IMG*/
+    background-image: url(./img/Background.png); 
+    background-repeat: no-repeat; /*Não repetir a imagem BACKGROUND*/
+    background-size: contain;
+    align-items: center;
+    text-align: center;    
+}
+
+.container{ /*Abrange o H1 e o IMG*/
+    height: 100vh; /*VH = VIEWPORT HEIGRHT = Pelo metadado ele detecta a altura dessa página*/
+    display: grid; /*Para deixar separado- Para isso precisa do complemento grid-template-columns*/
+    grid-template-columns: 50% 50%; /*Será dividido em 2 colunas e essas 2 colunas terão 50% cada uma para ver a separação aperta F12 no inspecionar*/
+    
+}
+
+.container__caixa{
+    margin: 0 6em; /*Zero topo e embaixo - espaçamento esquerda 6em e direita*/
+}
+
+.container_titulo{
+    font-size: 28px;
+    font-weight: 700; 
+}
+
+.container__img{
+    margin: 1em 0 2em 0; /*Espaçamento externo 1em topo e 2em baixo*/
+}
+
+.container__botao{
+    display: block; /*Ele esta ocupando a pagina inteira, block tem essa propriedade*/
+    background-color: var(--botao-azul);
+    border-radius: 8px;
+    padding: 1em; /*1em = 16px medida relativa*/
+    color: var(--branco-principal);
+    text-decoration: none; /*Sem decoração do texto = sem anderlaine embaixo*/
+    margin-bottom: 1em; /*Espaçamento externo entre os dois botões*/
+}
+
+.container__botao:hover{
+    background-color: var(--botao-azul-efeito);
+
+}
+
+.botao_secundario{
+    background-color: transparent; /*Pelo botão ser transparente*/
+    border: 2px solid var(--branco-principal);
+}
+
+.container__aviso{
+    font-size: 12px;
+    color: var(--cinza-secundario);
+    
+}
+
+.container__linha{
+    border-top: 8px solid rgba(255, 252, 252, 0.133);
+}
+
+.secundario__img{
+    width: 498px;
+    padding-left: 35px;
+}
+
+
+.secundario{
+    align-items: center;
+    margin: 0 5em;
+    
+}
+
+.descricao__titulo{
+    font-size: 48px;
+    font-weight: 400;
+    color: var(--branco-principal);
+    margin-bottom: 0.1em;
+}
+
+.descricao__texto{
+    color: var(--cinza-secundario);
+    max-width: 700px;
+}
+
+.secundario__botao{
+    display: inline-block; /*Inline transformou em linha e ocupou so o espaço dele canto esquerdo - block deixa usar altura a largura se quisessemos*/
+    margin-top: 1em;
+}
+
+.container__div{
+    max-width: 600px;  
+}
+
+
+.secundario__imagem{
+    width: 547px;
+}
+
+.dispositivos{
+    text-align: center;
+    margin: 5em 0 ;
+}
+
+.dispositivos__titulo{
+    font-size: 48px;
+    color: var(--branco-principal);
+    margin: 1em 0 2em 0 ; /*Vai ter 1em de altura, direita 0, baixo 2em e direita 0*/
+
+}
+
+
+.dispositivos__listas{
+    display: flex; /*Ele deixou as listas em linha*/
+    justify-content: center;
+    list-style-type: none; /*Tipo de estilo da lista = nenhum*/
+    margin: 5em 0;
+}
+
+.lista__itens{
+    font-size: 32px;
+    color: var(--branco-principal);
+}
+
+                             /*FOOTER*/
+
+.rodape{
+    text-align: center; /*Cebtralizar a Imagem e também as escritas*/
+    align-items: center;
+    margin: 5em 50px;
+
+}
+
+.rodape_img{
+    width: 496px;
+}
+
+.rodape__lista{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    gap: 1em; /*Defina a distância entre linhas - Elas antes estavam grudadas*/
+    list-style-type: none; /*Tira as bolinhas da lista*/
+    margin-top: 2em;
+
+}
+
+.lista__link a{
+    display: flex; /*Ele deixou as listas em linha*/
+    font-size: 16px;
+    color: var(--branco-principal);
+    text-decoration: none; /*Tirar o sublinhado embaixo*/  
+}
+
+.lista__link a:hover{
+    color: var(--botao-azul);
+}
+
+
+.lista__link a:active{
+    color: #86aedf;
+}
+
+.rodape__texto{
+    font-size: 14px;
+    color: var(--cinza-secundario);
+    margin-top: 2em;
+
+}
